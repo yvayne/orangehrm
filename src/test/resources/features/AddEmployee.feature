@@ -4,6 +4,7 @@ Feature: PIM
   As a Admin user
   I want to verify that an employee is created successfully
 
+  @DeleteUser
   Scenario: Verify that is possible to create an employee
     Given I login as Admin user on orangehrm index page
     When I click on PIM tab

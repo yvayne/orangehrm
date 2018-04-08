@@ -48,7 +48,7 @@ public class EmployeeListPage extends BasePage {
     }
 
     public void setEmployeeNameTextField(final String fullName) {
-        CommonActions.setInputField(employeeIdTextField, fullName);
+        CommonActions.setInputField(employeeNameTextField, fullName);
     }
 
     public void setEmployeeIdTextField(final String employeeId) {

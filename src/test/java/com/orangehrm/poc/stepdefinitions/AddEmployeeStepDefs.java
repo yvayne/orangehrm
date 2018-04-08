@@ -32,6 +32,7 @@ public class AddEmployeeStepDefs {
         employeeEntity.setMiddleName(employeeMap.get("MiddleName"));
         employeeEntity.setLastName(employeeMap.get("LastName"));
         employeeEntity.setEmployeeId(addEmployeePage.getEmployeeId());
+
     }
 
     @And("^I click on Save Button$")

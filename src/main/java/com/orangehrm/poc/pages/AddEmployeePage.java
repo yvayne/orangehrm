@@ -55,6 +55,7 @@ public class AddEmployeePage extends BasePage {
     }
 
     public PersonalDetailsPage clickSaveButton() {
+        CommonActions.clickElement(saveButton);
         return new PersonalDetailsPage();
     }
 }

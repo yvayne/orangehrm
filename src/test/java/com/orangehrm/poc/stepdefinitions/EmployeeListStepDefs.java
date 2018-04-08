@@ -29,7 +29,8 @@ public class EmployeeListStepDefs {
 
     @And("^I fill the full employee name on Employee Name text field$")
     public void iFillTheFullEmployeeNameOnEmployeeNameTextField() {
-        employeeListPage.setEmployeeNameTextField(employeeEntity.getFullName());
+        //employeeListPage.setEmployeeNameTextField(employeeEntity.getFullName());
+        employeeListPage.setEmployeeIdTextField(employeeEntity.getEmployeeId());
     }
 
     @And("^I click on Search Button$")
