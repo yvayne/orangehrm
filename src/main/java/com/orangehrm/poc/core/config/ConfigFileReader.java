@@ -114,5 +114,14 @@ public class ConfigFileReader {
     public int getExplicitTimeWait() {
         return Integer.parseInt(getEnv("explicitTimeWait"));
     }
+
+    /**
+     * Gets the sleep Time Wait.
+     *
+     * @return the value of sleep time wait.
+     */
+    public int getSleepTimeWait() {
+        return Integer.parseInt(getEnv("sleepTimeWait"));
+    }
 }
 

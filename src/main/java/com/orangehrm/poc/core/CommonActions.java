@@ -97,4 +97,14 @@ public class CommonActions {
     public static boolean isCurrentBrowser(final DriverTypes driver) {
         return ConfigFileReader.getInstance().getBrowser().contains(driver.name());
     }
+
+    /**
+     * Gets the value from a web element.
+     * @param webElement the webElement.
+     * @param value the attribute value.
+     * @return the value obtained from a web Element.
+     */
+    public static String getValueFromElement(final WebElement webElement, final String value) {
+        return webElement.getAttribute(value);
+    }
 }

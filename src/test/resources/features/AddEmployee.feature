@@ -11,12 +11,9 @@ Feature: PIM
       And I fill the employee from with the following data:
         | FirstName  | Yuri   |
         | MiddleName | Vayne  |
-        | Last Name  | Rivera |
+        | LastName   | Rivera |
       And I click on Save Button
       And I click on Employee List tab
       And I fill the full employee name on Employee Name text field
       And I click on Search Button
     Then the employee created should be displayed on employee table
-
-
-

@@ -44,12 +44,12 @@ public final class DriverManager {
      * Initializes the Web Driver instance.
      */
     public void initializeDriver() {
-        DriverTypes driverType = DriverTypes.valueOf(ConfigFileReader.getInstance().getEnv(BROWSER));
+        DriverTypes driverType = DriverTypes.valueOf(ConfigFileReader.getInstance().getBrowser());
         this.webDriver = DriverFactory.getDriver(driverType);
         this.webDriver.manage().window().maximize();
-        int implicitTimeWait = Integer.parseInt(ConfigFileReader.getInstance().getEnv(ENV_IMPLICIT_TIME_WAIT));
-        int explicitTimeWait = Integer.parseInt(ConfigFileReader.getInstance().getEnv(ENV_EXPLICIT_TIME_WAIT));
-        int sleepTimeWait = Integer.parseInt(ConfigFileReader.getInstance().getEnv(ENV_SLEEP_TIME_WAIT));
+        int implicitTimeWait = ConfigFileReader.getInstance().getImplicitTimeWait();
+        int explicitTimeWait = ConfigFileReader.getInstance().getExplicitTimeWait();
+        int sleepTimeWait = ConfigFileReader.getInstance().getSleepTimeWait();
         setTimeWait(implicitTimeWait, explicitTimeWait, sleepTimeWait);
     }
 

@@ -10,17 +10,14 @@ import org.openqa.selenium.support.FindBy;
  */
 public class LoginPage extends BasePage {
 
-    @FindBy(id = "firstName")
-    private WebElement firstNameTextField;
+    @FindBy(css = "input#txtUsername")
+    private WebElement userNameTextField;
 
-    @FindBy(id = "middleName")
-    private WebElement middleNameTextField;
+    @FindBy(css = "input#txtPassword")
+    private WebElement passwordTextField;
 
-    @FindBy(id = "lastName")
-    private WebElement lastNameTextField;
-
-    @FindBy(id = "btnSave")
-    private WebElement saveButton;
+    @FindBy(css = "input#btnLogin")
+    private WebElement loginButton;
 
     /**
      * Initializes and instance of {@link LoginPage}.
@@ -34,27 +31,27 @@ public class LoginPage extends BasePage {
      */
     @Override
     public void waitForLoad() {
-        CommonActions.isDisplayed(firstNameTextField);
+        //CommonActions.isDisplayed(userNameTextField);
     }
 
     /**
      * Sets the first name text field.
-     * @param firstNameValue
+     * @param usernameValue
      */
-    public void setFirstName(final String firstNameValue) {
-        CommonActions.clearAndSetInputField(firstNameTextField, firstNameValue);
+    public void setUserNameTextField(final String usernameValue) {
+        CommonActions.clearAndSetInputField(userNameTextField, usernameValue);
     }
 
     /**
      * Sets the middle name text field.
-     * @param middleNameValue
+     * @param password
      */
-    public void setMiddleName(final String middleNameValue) {
-        CommonActions.clearAndSetInputField(middleNameTextField, middleNameValue);
+    public void setPasswordTextField(final String password) {
+        CommonActions.clearAndSetInputField(passwordTextField, password);
     }
 
-    public DashboardPage pressSaveButton() {
-        CommonActions.clickElement(saveButton);
+    public DashboardPage pressLoginButton() {
+        CommonActions.clickElement(loginButton);
         return new DashboardPage();
     }
 }
