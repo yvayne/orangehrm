@@ -4,15 +4,15 @@ Feature: PIM
   As a Admin user
   I want to verify that an employee is created successfully
 
-  @DeleteUser
+  @deleteUser
   Scenario: Verify that is possible to create an employee
     Given I login as Admin user on orangehrm index page
     When I click on PIM tab
       And I click on Add Employee tab
       And I fill the employee from with the following data:
-        | FirstName  | Yuri   |
-        | MiddleName | Vayne  |
-        | LastName   | Rivera |
+        | FirstName  | Purple     |
+        | MiddleName | Hrm        |
+        | LastName   | Automation |
       And I click on Save Button
       And I click on Employee List tab
       And I fill the full employee name on Employee Name text field
