@@ -1,7 +1,9 @@
--/.gradle/
--/.idea/
--/build/
--/classes/
--/logs/
--/out/
--*.iml
+/.gradle/
+/.idea/
+/build/
+/classes/
+/logs/
+/target/
+/test-output/
+/gradle/
+*.iml
