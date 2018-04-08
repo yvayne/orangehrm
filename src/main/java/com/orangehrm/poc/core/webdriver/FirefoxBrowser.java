@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 /**
- * Created by YVAYNER-DV01 on 4/6/2018.
+ * It is in charged to instantiate a Firefox web driver.
  */
 public class FirefoxBrowser implements Browser {
 

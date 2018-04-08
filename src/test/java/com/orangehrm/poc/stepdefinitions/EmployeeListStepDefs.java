@@ -11,13 +11,14 @@ import org.testng.Assert;
 import java.util.Map;
 
 /**
- * Created by YVAYNER-DV01 on 4/7/2018.
+ * This class represents the step definitions for  Employee list page.
  */
 public class EmployeeListStepDefs {
     private EmployeeListPage employeeListPage;
     private AddEmployeePage addEmployeePage;
     private EmployeeEntity employeeEntity;
-    public EmployeeListStepDefs(EmployeeListPage employeeListPage, AddEmployeePage addEmployeePage, EmployeeEntity employeeEntity) {
+    public EmployeeListStepDefs(EmployeeListPage employeeListPage, AddEmployeePage addEmployeePage,
+                                EmployeeEntity employeeEntity) {
         this.employeeListPage = employeeListPage;
         this.addEmployeePage = addEmployeePage;
         this.employeeEntity = employeeEntity;
@@ -29,7 +30,7 @@ public class EmployeeListStepDefs {
 
     @And("^I fill the full employee name on Employee Name text field$")
     public void iFillTheFullEmployeeNameOnEmployeeNameTextField() {
-        //employeeListPage.setEmployeeNameTextField(employeeEntity.getFullName());
+        employeeListPage.setEmployeeNameTextField(employeeEntity.getFullName());
         employeeListPage.setEmployeeIdTextField(employeeEntity.getEmployeeId());
     }
 
@@ -40,7 +41,6 @@ public class EmployeeListStepDefs {
 
     @Then("^the employee created should be displayed on employee table$")
     public void theEmployeeCreatedShouldBeDisplayedOnEmployeeTable() {
-        //{"Id","First&MiddleName","LastName","JobTitle","Employee","SubUnit","Supervisor"}
         Map<String,String> actualResult = employeeListPage.getEmployeeResult();
         Assert.assertEquals(actualResult.get("Id"),employeeEntity.getEmployeeId());
         Assert.assertEquals(actualResult.get("First&MiddleName"),String.format("%s %s",

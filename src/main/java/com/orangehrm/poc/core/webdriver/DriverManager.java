@@ -8,14 +8,10 @@ import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 
 /**
- * Created by YVAYNER-DV01 on 4/6/2018.
+ * This class in charge to configure the driver.
  */
 public final class DriverManager {
 
-    private static final String BROWSER = "uiBrowser";
-    private static final String ENV_IMPLICIT_TIME_WAIT = "uiImplicitTimeWait";
-    private static final String ENV_EXPLICIT_TIME_WAIT = "uiExplicitTimeWait";
-    private static final String ENV_SLEEP_TIME_WAIT = "uiExplicitTimeWait";
     private static DriverManager instance;
 
     private WebDriver webDriver;

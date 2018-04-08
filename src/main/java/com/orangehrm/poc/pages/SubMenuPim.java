@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 /**
- * Created by YVAYNER-DV01 on 4/7/2018.
+ * It is in charge to represent the submenu component.
  */
 public class SubMenuPim extends BasePage {
     @FindBy(id="menu_pim_viewEmployeeList")
@@ -16,13 +16,8 @@ public class SubMenuPim extends BasePage {
     private WebElement addEmployeeButton;
 
     public SubMenuPim(){
-        waitForLoad();
     }
 
-    @Override
-    public void waitForLoad() {
-        //CommonActions.isDisplayed(employeeListButton);
-    }
 
     public EmployeeListPage clickEmployeeListButton() {
         CommonActions.clickElement(employeeListButton);

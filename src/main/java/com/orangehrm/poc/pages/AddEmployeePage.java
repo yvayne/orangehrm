@@ -6,13 +6,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 /**
- * Created by YVAYNER-DV01 on 4/7/2018.
+ * It is in charge to represent the Add employee page.
  */
 public class AddEmployeePage extends BasePage {
 
     public static final String VALUE = "value";
 
-    private NavigationBar navBar;
+    private NavigationBar navigationBar;
 
     @FindBy(id = "firstName")
     private WebElement firstNameTextField;
@@ -30,12 +30,7 @@ public class AddEmployeePage extends BasePage {
     private WebElement saveButton;
 
     public AddEmployeePage() {
-        navBar = new NavigationBar();
-        waitForLoad();
-    }
-    @Override
-    public void waitForLoad() {
-        //CommonActions.isDisplayed(firstNameTextField);
+        navigationBar = new NavigationBar();
     }
 
     public void setFirstNameTextField(final String firstName) {

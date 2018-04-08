@@ -1,7 +1,7 @@
 package com.orangehrm.poc.utils.entities;
 
 /**
- * Created by YVAYNER-DV01 on 4/7/2018.
+ * It is in charge to represent the an employee.
  */
 public class EmployeeEntity {
     private String firstName;

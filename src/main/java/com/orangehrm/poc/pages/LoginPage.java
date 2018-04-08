@@ -23,15 +23,6 @@ public class LoginPage extends BasePage {
      * Initializes and instance of {@link LoginPage}.
      */
     public LoginPage() {
-        waitForLoad();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    public void waitForLoad() {
-        //CommonActions.isDisplayed(userNameTextField);
     }
 
     /**

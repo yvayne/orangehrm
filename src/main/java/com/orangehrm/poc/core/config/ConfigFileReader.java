@@ -14,6 +14,7 @@ import java.util.Properties;
 public class ConfigFileReader {
 
     private static final Logger LOGGER = LogManager.getLogger();
+    public static final String GRADLE_PROPERTIES = "gradle.properties";
 
     private static ConfigFileReader instance;
 
@@ -23,7 +24,7 @@ public class ConfigFileReader {
      * Private constructor for Env.
      */
     private ConfigFileReader() {
-        try (FileInputStream input = new FileInputStream("gradle.properties")) {
+        try (FileInputStream input = new FileInputStream(GRADLE_PROPERTIES)) {
             properties = new Properties();
             properties.load(input);
         } catch (FileNotFoundException e) {
@@ -107,7 +108,7 @@ public class ConfigFileReader {
     }
 
     /**
-     * Gets the ExplicitT Time Wait.
+     * Gets the Explicit Time Wait.
      *
      * @return the value of explicit time wait.
      */

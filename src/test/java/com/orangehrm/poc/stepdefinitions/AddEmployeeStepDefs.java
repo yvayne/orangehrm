@@ -8,7 +8,7 @@ import cucumber.api.java.en.And;
 import java.util.Map;
 
 /**
- * Created by YVAYNER-DV01 on 4/7/2018.
+ * this class represents the step definitions for add employee page.
  */
 public class AddEmployeeStepDefs {
     private AddEmployeePage addEmployeePage;

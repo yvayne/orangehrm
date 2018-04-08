@@ -1,6 +1,5 @@
 package com.orangehrm.poc.pages;
 
-import com.orangehrm.poc.core.CommonActions;
 import com.orangehrm.poc.pages.base.BasePage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -10,26 +9,20 @@ import org.openqa.selenium.support.FindBy;
  */
 public class DashboardPage extends BasePage{
 
-    private NavigationBar navBar;
+    private NavigationBar navigationBar;
 
     @FindBy(css="div.head")
     private WebElement dashboardLabel;
 
     public DashboardPage() {
-        navBar = new NavigationBar();
-        waitForLoad();
-    }
-
-    @Override
-    public void waitForLoad() {
-        //CommonActions.isDisplayed(dashboardLabel);
+        navigationBar = new NavigationBar();
     }
 
     public EmployeeListPage clickPimTab() {
-        return navBar.clickPimTab();
+        return navigationBar.clickPimTab();
     }
 
     public NavigationBar getNavigationBar() {
-        return navBar;
+        return navigationBar;
     }
 }

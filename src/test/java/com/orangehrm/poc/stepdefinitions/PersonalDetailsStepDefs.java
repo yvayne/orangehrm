@@ -8,12 +8,13 @@ import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 
 /**
- * Created by YVAYNER-DV01 on 4/7/2018.
+ * This class represents the step definitions for personal details page.
  */
 public class PersonalDetailsStepDefs {
     private EmployeeListPage employeeListPage;
     private PersonalDetailsPage personalDetailsPage;
     private EmployeeEntity employeeEntity;
+
     public PersonalDetailsStepDefs(EmployeeListPage employeeListPage, PersonalDetailsPage personalDetailsPage, EmployeeEntity employeeEntity) {
         this.employeeEntity = employeeEntity;
         this.employeeListPage = employeeListPage;

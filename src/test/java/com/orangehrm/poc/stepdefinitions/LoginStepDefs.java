@@ -7,7 +7,7 @@ import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
 
 /**
- * Created by YVAYNER-DV01 on 4/7/2018.
+ * this class represents the step definitions for login page.
  */
 public class LoginStepDefs {
     private LoginPage loginPage;
@@ -17,6 +17,7 @@ public class LoginStepDefs {
         this.loginPage = loginPage;
         this.dashboardPage = dashboardPage;
     }
+
     @Given("^I login as Admin user on orangehrm index page$")
     public void iLoginAsAdminUserOnOrangehrmIndexPage() {
         loginPage.setUserNameTextField(ConfigFileReader.getInstance().getUsername());

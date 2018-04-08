@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 /**
- * Created by YVAYNER-DV01 on 4/6/2018.
+ * It is in charge to represent the navigation bar component.
  */
 public class NavigationBar extends BasePage {
 
@@ -17,12 +17,6 @@ public class NavigationBar extends BasePage {
     private WebElement leaveTab;
 
     public NavigationBar() {
-       waitForLoad();
-    }
-
-    @Override
-    public void waitForLoad() {
-        //CommonActions.isDisplayed(pimTab);
     }
 
     public EmployeeListPage clickPimTab() {

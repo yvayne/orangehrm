@@ -3,11 +3,11 @@ package com.orangehrm.poc.hooks;
 import cucumber.api.java.After;
 
 /**
- * Created by YVAYNER-DV01 on 4/7/2018.
+ * It is in charge to delete a user once was created.
  */
 public class DeleteUserHook {
     @After(value = "@deleteUser")
     public final void deleteUserCreated() {
-        System.out.println("Eliminar User");
+        System.out.println("Deleted User");
     }
 }

@@ -6,13 +6,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 /**
- * Created by YVAYNER-DV01 on 4/7/2018.
+ * It is in charge to represent the employee list page.
  */
 public class EmployeeListPage extends BasePage {
 
@@ -33,18 +32,12 @@ public class EmployeeListPage extends BasePage {
     @FindBy(css= "tr.odd")
     private WebElement resultTable;
 
-    private NavigationBar navBar;
+    private NavigationBar navigationBar;
     private SubMenuPim menuPim;
 
     public EmployeeListPage() {
-        navBar = new NavigationBar();
+        navigationBar = new NavigationBar();
         menuPim = new SubMenuPim();
-        waitForLoad();
-    }
-
-    @Override
-    public void waitForLoad() {
-        //CommonActions.isDisplayed(informationLabel);
     }
 
     public void setEmployeeNameTextField(final String fullName) {
@@ -65,7 +58,6 @@ public class EmployeeListPage extends BasePage {
         List<WebElement> columns = resultTable.findElements(By.tagName("td"));
         for(int i=0;i<ColumnsName.length;i++) {
             employeeResult.put(ColumnsName[i], columns.get(i+1).getText());
-            System.out.println(columns.get(i+1).getText());
         }
         return employeeResult;
     }
@@ -75,6 +67,6 @@ public class EmployeeListPage extends BasePage {
     }
 
     public NavigationBar getNavigationBar() {
-        return navBar;
+        return navigationBar;
     }
 }

@@ -5,7 +5,7 @@ import com.orangehrm.poc.pages.EmployeeListPage;
 import cucumber.api.java.en.When;
 
 /**
- * Created by YVAYNER-DV01 on 4/7/2018.
+ * This class represents the step definitions for  dashboard page.
  */
 public class DashboardStepDefs {
     private DashboardPage dashboardPage;

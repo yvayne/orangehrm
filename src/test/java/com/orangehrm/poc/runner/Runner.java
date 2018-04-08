@@ -1,7 +1,5 @@
 package com.orangehrm.poc.runner;
 
-
-
 import com.orangehrm.poc.core.config.ConfigFileReader;
 import com.orangehrm.poc.core.webdriver.DriverManager;
 import cucumber.api.CucumberOptions;
