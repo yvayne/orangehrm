@@ -27,7 +27,7 @@ public class ChromeBrowser implements Browser {
      */
     @Override
     public WebDriver getDriver() {
-        WebDriverManager.chromedriver().setup();
+        WebDriverManager.chromedriver().version("2.37").setup();
         return new ChromeDriver();
     }
 }
